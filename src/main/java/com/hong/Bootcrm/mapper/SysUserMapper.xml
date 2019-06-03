@@ -5,8 +5,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.hong.Bootcrm.mapper.SysUserMapper">
 	<select id="findUser" parameterType="String" resultType="sysUser">
 		select * from sys_user where
-		user_code = #{usercode}
-		and user_password = #{password}
+		user_code = #{userCode}
+		and user_password = #{userPassword}
 		and user_state = '1'
 	</select>
 </mapper>
