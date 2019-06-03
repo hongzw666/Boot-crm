@@ -18,12 +18,13 @@ public class SysUserController {
 	
 	@RequestMapping("/login")
 	@ResponseBody
-	public String login(@RequestBody SysUser user,HttpSession session) {
+	public String login(@RequestBody SysUser user) {
 		
 		SysUser findUser = sysUserService.findUser( user.getUserCode(),user.getUserPassword());
 		if (findUser!=null) {
-			return "customer";
+			return "ok.html";
 		}
-		return "login.html";
+		
+		return "的酒叟放假的";
 	} 
 }
