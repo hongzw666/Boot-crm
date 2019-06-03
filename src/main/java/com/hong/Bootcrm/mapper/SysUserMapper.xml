@@ -3,11 +3,10 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hong.Bootcrm.mapper.SysUserMapper">
-	<insert id="" parameterType="User">
-
+	<select id="findUser" parameterType="String" resultType="sysUser">
 		select * from sys_user where
 		user_code = #{usercode}
 		and user_password = #{password}
 		and user_state = '1'
-	</insert>
+	</select>
 </mapper>
