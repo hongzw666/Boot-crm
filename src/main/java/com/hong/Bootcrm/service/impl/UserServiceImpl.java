@@ -16,7 +16,6 @@ public class UserServiceImpl implements UserService{
 	
 	@Override
 	public int addUser(User user) {
-		System.out.println(this.userMapper);
 		return this.userMapper.addUser(user);
 	}
 

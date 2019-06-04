@@ -18,5 +18,4 @@ public class SysUserServiceImpl implements SysUserService{
 		SysUser sysUser = sysUserMapper.findUser(userCode, userPassword);
 		return sysUser;
 	}
-
 }

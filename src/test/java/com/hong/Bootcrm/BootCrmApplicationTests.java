@@ -25,7 +25,7 @@ public class BootCrmApplicationTests {
 	@Test
 	public void aaa() {
 		User user = new User();
-		user.setUsername("aa");
+		user.setUsername("av");
 		user.setPassword("aa");
 		userService1.addUser(user);
 	}

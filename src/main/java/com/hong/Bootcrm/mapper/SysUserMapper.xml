@@ -7,6 +7,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from sys_user where
 		user_code = #{userCode}
 		and user_password = #{userPassword}
-		and user_state = '1'
+		and user_state = '1';
 	</select>
 </mapper>

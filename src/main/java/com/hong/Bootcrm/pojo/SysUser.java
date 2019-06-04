@@ -2,15 +2,16 @@ package com.hong.Bootcrm.pojo;
 
 public class SysUser {
 	
-	private String userId;	
+	private int userId;	
 	private String userCode;
 	private String userName;	
 	private String userPassword;
 	private String userState;
-	public String getUserId() {
+	
+	public int getUserId() {
 		return userId;
 	}
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 	public String getUserCode() {
@@ -37,4 +38,10 @@ public class SysUser {
 	public void setUserState(String userState) {
 		this.userState = userState;
 	}
+	@Override
+	public String toString() {
+		return "SysUser [userId=" + userId + ", userCode=" + userCode + ", userName=" + userName + ", userPassword="
+				+ userPassword + ", userState=" + userState + "]";
+	}
+	
 }
