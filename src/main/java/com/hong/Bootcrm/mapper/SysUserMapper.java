@@ -1,11 +1,12 @@
 package com.hong.Bootcrm.mapper;
 
-import org.apache.ibatis.annotations.Param;
+import java.util.List;
 
 import com.hong.Bootcrm.pojo.SysUser;
 
 public interface SysUserMapper {
 
-	public SysUser findUser(@Param("userCode") String userCode, @Param("userPassword") String userPassword);
+	public SysUser findUser(String userCode, String userPassword);
+	public List<SysUser> findAllUser();
 
 }

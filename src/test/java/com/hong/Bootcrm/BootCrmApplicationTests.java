@@ -1,11 +1,15 @@
 package com.hong.Bootcrm;
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.hong.Bootcrm.mapper.SysUserMapper;
 import com.hong.Bootcrm.pojo.SysUser;
 import com.hong.Bootcrm.pojo.User;
 import com.hong.Bootcrm.service.SysUserService;
@@ -18,10 +22,14 @@ public class BootCrmApplicationTests {
 	UserService userService1;
 	@Autowired
 	SysUserService sysUserService;
-	
+	@Autowired
+	SysUserMapper sysUM;
+
 	@Test
 	public void contextLoads() {
+
 	}
+
 	@Test
 	public void aaa() {
 		User user = new User();
@@ -29,9 +37,20 @@ public class BootCrmApplicationTests {
 		user.setPassword("aa");
 		userService1.addUser(user);
 	}
+
 	@Test
-	public void finUser() {
-		SysUser findUser = sysUserService.findUser("1","1");
-		System.out.println(findUser);
+	public void finTUser() {
+		SysUser findServiceUser = sysUserService.findUser("a", "c");
+		SysUser findDaoUser = sysUM.findUser("a", "c");
+		System.out.println(findServiceUser);
+		System.out.println(findDaoUser);
+	}
+
+	@Test
+	public void findAllUser() {
+		List<SysUser> findAllUser = sysUserService.findAllUser();
+		for (SysUser sysUser : findAllUser) {
+			System.out.println(sysUser);
+		}
 	}
 }

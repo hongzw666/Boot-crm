@@ -2,46 +2,49 @@ package com.hong.Bootcrm.pojo;
 
 public class SysUser {
 	
-	private int userId;	
-	private String userCode;
-	private String userName;	
-	private String userPassword;
-	private String userState;
+	private int user_id;	
+	private String user_code;
+	private String user_name;	
+	private String user_password;
+	private int user_state;
+	public int getUser_id() {
+		return user_id;
+	}
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
 	
-	public int getUserId() {
-		return userId;
+	public String getUser_code() {
+		return user_code;
 	}
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setUser_code(String user_code) {
+		this.user_code = user_code;
 	}
-	public String getUserCode() {
-		return userCode;
+	public String getUser_name() {
+		return user_name;
 	}
-	public void setUserCode(String userCode) {
-		this.userCode = userCode;
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
 	}
-	public String getUserName() {
-		return userName;
+	public String getUser_password() {
+		return user_password;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUser_password(String user_password) {
+		this.user_password = user_password;
 	}
-	public String getUserPassword() {
-		return userPassword;
+	public int getUser_state() {
+		return user_state;
 	}
-	public void setUserPassword(String userPassword) {
-		this.userPassword = userPassword;
-	}
-	public String getUserState() {
-		return userState;
-	}
-	public void setUserState(String userState) {
-		this.userState = userState;
+	public void setUser_state(int user_state) {
+		this.user_state = user_state;
 	}
 	@Override
 	public String toString() {
-		return "SysUser [userId=" + userId + ", userCode=" + userCode + ", userName=" + userName + ", userPassword="
-				+ userPassword + ", userState=" + userState + "]";
+		return "SysUser [user_id=" + user_id + ", userCode=" + user_code + ", user_name=" + user_name
+				+ ", user_password=" + user_password + ", user_state=" + user_state + "]";
 	}
+	
+	
+	
 	
 }
