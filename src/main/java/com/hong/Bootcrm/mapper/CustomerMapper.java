@@ -9,5 +9,8 @@ public interface CustomerMapper {
 	public List<Customer> selectCustomerList(Customer customer);
 
 	public Integer selectCustomerListCount(Customer customer);
+	
+	public int addCustomer(Customer customer);
+	
 
 }

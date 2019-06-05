@@ -1,10 +1,10 @@
 package com.hong.Bootcrm.pojo;
 
 public class Customer {
-	private String cust_id;
+	private int cust_id;
 	private String cust_name;
-	private String cust_user_id;
-	private String cust_create_id;
+	private int cust_user_id;
+	private int cust_create_id;
 	private String cust_source;
 	private String cust_industry;
 	private String cust_level;
@@ -15,14 +15,6 @@ public class Customer {
 	private String cust_address;
 	private String cust_createtime;
 
-	public String getCust_id() {
-		return cust_id;
-	}
-
-	public void setCust_id(String cust_id) {
-		this.cust_id = cust_id;
-	}
-
 	public String getCust_name() {
 		return cust_name;
 	}
@@ -31,19 +23,27 @@ public class Customer {
 		this.cust_name = cust_name;
 	}
 
-	public String getCust_user_id() {
+	public int getCust_id() {
+		return cust_id;
+	}
+
+	public void setCust_id(int cust_id) {
+		this.cust_id = cust_id;
+	}
+
+	public int getCust_user_id() {
 		return cust_user_id;
 	}
 
-	public void setCust_user_id(String cust_user_id) {
+	public void setCust_user_id(int cust_user_id) {
 		this.cust_user_id = cust_user_id;
 	}
 
-	public String getCust_create_id() {
+	public int getCust_create_id() {
 		return cust_create_id;
 	}
 
-	public void setCust_create_id(String cust_create_id) {
+	public void setCust_create_id(int cust_create_id) {
 		this.cust_create_id = cust_create_id;
 	}
 
@@ -117,6 +117,24 @@ public class Customer {
 
 	public void setCust_createtime(String cust_createtime) {
 		this.cust_createtime = cust_createtime;
+	}
+
+	public Customer(String cname, int cuser_id, int ccreate_id, String csource, String cindustry, String clevel,
+			String clinkman, String cphone, String cmobile, String czipcode, String caddress, String ccreatetime) {
+
+		this.cust_name = cname;
+		this.cust_user_id = cuser_id;
+		this.cust_create_id = ccreate_id;
+		this.cust_source = csource;
+		this.cust_industry = cindustry;
+		this.cust_level = clevel;
+		this.cust_linkman = clinkman;
+		this.cust_phone = cphone;
+		this.cust_mobile = cmobile;
+		this.cust_zipcode = czipcode;
+		this.cust_address = caddress;
+		this.cust_createtime = ccreatetime;
+
 	}
 
 	@Override

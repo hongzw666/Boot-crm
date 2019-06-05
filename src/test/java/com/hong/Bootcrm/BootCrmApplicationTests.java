@@ -10,8 +10,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.hong.Bootcrm.mapper.SysUserMapper;
+import com.hong.Bootcrm.pojo.Customer;
 import com.hong.Bootcrm.pojo.SysUser;
 import com.hong.Bootcrm.pojo.User;
+import com.hong.Bootcrm.service.CustomerService;
 import com.hong.Bootcrm.service.SysUserService;
 import com.hong.Bootcrm.service.UserService;
 
@@ -23,7 +25,8 @@ public class BootCrmApplicationTests {
 	@Autowired
 	SysUserService sysUserService;
 	@Autowired
-	SysUserMapper sysUM;
+	CustomerService customerService;
+
 
 	@Test
 	public void contextLoads() {
@@ -41,9 +44,7 @@ public class BootCrmApplicationTests {
 	@Test
 	public void finTUser() {
 		SysUser findServiceUser = sysUserService.findUser("a", "c");
-		SysUser findDaoUser = sysUM.findUser("a", "c");
 		System.out.println(findServiceUser);
-		System.out.println(findDaoUser);
 	}
 
 	@Test
@@ -53,4 +54,18 @@ public class BootCrmApplicationTests {
 			System.out.println(sysUser);
 		}
 	}
+	
+	@Test
+	public void addCustomer() {
+		
+		Customer customer = new Customer("springboot中", 667, 668, "110", "112", "119", "springcloud", "400-6666666", "13300001111", "100866", "广州科贸", "2019-06-05 10:32:03");
+		
+		customerService.addCustomer(customer);
+		
+	}
+	
+	
+	
+	
+	
 }
