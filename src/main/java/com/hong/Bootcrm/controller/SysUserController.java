@@ -2,8 +2,12 @@ package com.hong.Bootcrm.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.hong.Bootcrm.pojo.SysUser;
 import com.hong.Bootcrm.service.SysUserService;
@@ -15,21 +19,20 @@ public class SysUserController {
 	
 	@RequestMapping("/tologin")
 	public String tologin() {
-		return "login.html";
+		return "login";
 	} 
 	
 	
-	@RequestMapping(value="/login")
-	@ResponseBody
-	public String login(String userCode,String userPassword) {
-		System.out.println(userCode);
-		System.out.println(userPassword);
-		SysUser findUser = sysUserService.findUser(userCode,userPassword);
+	@RequestMapping("/login")
+	public String login(String usercode,String password,Model model) {
+		System.out.println(usercode);
+		System.out.println(password);
+		SysUser findUser = sysUserService.findUser(usercode,password);
 		System.out.println(findUser);
 		if (findUser != null) {
-			return "ok.html";
+			return "customer";
 		}
-		
-		return "的酒叟放假的";
+		model.addAttribute("msg","账号或密码错误，请重新输入");
+		return "login";
 	} 
 }
