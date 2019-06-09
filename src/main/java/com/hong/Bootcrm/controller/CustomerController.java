@@ -86,5 +86,16 @@ public class CustomerController {
 			return "F";
 		}
 	}
-
+	// 删除客户
+		@RequestMapping("/customer/delete")
+		@ResponseBody
+		public String customerDelete(Integer id) {
+			
+			int rows = customerService.deleteCustomer(id);
+			if (rows > 0) {
+				return "OK";
+			} else {
+				return "F";
+			}
+		}
 }

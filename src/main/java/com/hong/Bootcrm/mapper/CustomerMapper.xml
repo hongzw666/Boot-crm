@@ -87,5 +87,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	insert into customer(cust_name, cust_user_id, cust_create_id, cust_source, cust_industry, cust_level, cust_linkman, cust_phone, cust_mobile, cust_zipcode, cust_address, cust_createtime)
 				value(#{cust_name},#{cust_user_id},#{cust_create_id},#{cust_source},#{cust_industry},#{cust_level},#{cust_linkman},#{cust_phone},#{cust_mobile},#{cust_zipcode},#{cust_address},#{cust_createtime})
 	</insert>
-
+	<delete id="deleteCustomer" parameterType="Integer">
+		delete from customer where cust_id=#{id}
+	</delete>
 </mapper>

@@ -52,4 +52,10 @@ public class CustomerServiceImpl implements CustomerService {
 		return result;
 	}
 
+	@Override
+	public int deleteCustomer(Integer id) {
+		
+		return customerMapper.deleteCustomer(id);
+	}
+
 }

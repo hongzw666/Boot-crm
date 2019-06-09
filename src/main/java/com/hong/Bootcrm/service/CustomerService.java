@@ -9,4 +9,5 @@ public interface CustomerService {
 	//查询用户列表
 	public Page<Customer> findCustomerList(Integer page,Integer rows,
 			String custName,String custSource,String custIndustry,String custLevel);
+	public int deleteCustomer(Integer id);
 }

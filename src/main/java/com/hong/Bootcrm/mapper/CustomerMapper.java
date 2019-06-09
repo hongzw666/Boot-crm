@@ -11,6 +11,8 @@ public interface CustomerMapper {
 	public Integer selectCustomerListCount(Customer customer);
 	
 	public int addCustomer(Customer customer);
+
+	public int deleteCustomer(Integer id);
 	
 
 }
