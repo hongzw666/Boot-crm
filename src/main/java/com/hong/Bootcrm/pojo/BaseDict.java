@@ -1,62 +1,77 @@
 package com.hong.Bootcrm.pojo;
 
 public class BaseDict {
-	private String dictId;
-	private String dictTypeCode;
-	private String dictTypeName;	
-	private String dictItemName;	
-	private String dictItemCode;	
-	private Integer dictSort;	
-	private String dictEnable;	
-	private String dictMemo;
-	
-	public String getDictId() {
-		return dictId;
+	private String dict_id;
+	private String dict_type_code;
+	private String dict_type_name;
+	private String dict_item_name;
+	private String dict_item_code;
+	private Integer dict_sort;
+	private String dict_enable;
+	private String dict_memo;
+
+	public String getDict_id() {
+		return dict_id;
 	}
-	public void setDictId(String dictId) {
-		this.dictId = dictId;
+
+	public void setDict_id(String dict_id) {
+		this.dict_id = dict_id;
 	}
-	public String getDictTypeCode() {
-		return dictTypeCode;
+
+	public String getDict_type_code() {
+		return dict_type_code;
 	}
-	public void setDictTypeCode(String dictTypeCode) {
-		this.dictTypeCode = dictTypeCode;
+
+	public void setDict_type_code(String dict_type_code) {
+		this.dict_type_code = dict_type_code;
 	}
-	public String getDictTypeName() {
-		return dictTypeName;
+
+	public String getDict_type_name() {
+		return dict_type_name;
 	}
-	public void setDictTypeName(String dictTypeName) {
-		this.dictTypeName = dictTypeName;
+
+	public void setDict_type_name(String dict_type_name) {
+		this.dict_type_name = dict_type_name;
 	}
-	public String getDictItemName() {
-		return dictItemName;
+
+	public String getDict_item_name() {
+		return dict_item_name;
 	}
-	public void setDictItemName(String dictItemName) {
-		this.dictItemName = dictItemName;
+
+	public void setDict_item_name(String dict_item_name) {
+		this.dict_item_name = dict_item_name;
 	}
-	public String getDictItemCode() {
-		return dictItemCode;
+
+	public String getDict_item_code() {
+		return dict_item_code;
 	}
-	public void setDictItemCode(String dictItemCode) {
-		this.dictItemCode = dictItemCode;
+
+	public void setDict_item_code(String dict_item_code) {
+		this.dict_item_code = dict_item_code;
 	}
-	public Integer getDictSort() {
-		return dictSort;
+
+	public Integer getDict_sort() {
+		return dict_sort;
 	}
-	public void setDictSort(Integer dictSort) {
-		this.dictSort = dictSort;
+
+	public void setDict_sort(Integer dict_sort) {
+		this.dict_sort = dict_sort;
 	}
-	public String getDictEnable() {
-		return dictEnable;
+
+	public String getDict_enable() {
+		return dict_enable;
 	}
-	public void setDictEnable(String dictEnable) {
-		this.dictEnable = dictEnable;
+
+	public void setDict_enable(String dict_enable) {
+		this.dict_enable = dict_enable;
 	}
-	public String getDictMemo() {
-		return dictMemo;
+
+	public String getDict_memo() {
+		return dict_memo;
 	}
-	public void setDictMemo(String dictMemo) {
-		this.dictMemo = dictMemo;
+
+	public void setDict_memo(String dict_memo) {
+		this.dict_memo = dict_memo;
 	}
-	
+
 }
