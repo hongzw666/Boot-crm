@@ -26,4 +26,10 @@ public class SysUserServiceImpl implements SysUserService{
 		List<SysUser> findAllUser = sysUserMapper.findAllUser();
 		return findAllUser;
 	}
+	@Override
+	public int insertUser(String user_code, String user_name, String user_password) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

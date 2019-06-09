@@ -1,5 +1,7 @@
 package com.hong.Bootcrm.controller;
 
+import java.util.Map;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,5 +52,25 @@ public class SysUserController {
 		session.invalidate();
 		return "redirect : tologin";
 	} 
+	
+	@RequestMapping("/zc")
+	public String tozc() {
+		return "zc";
+	} 
+	
+	@RequestMapping("/success")
+	public String zc(SysUser user,Map<String,Object> map) {
+		SysUser user_code=sysUserService.findUser(user.getUser_code() ,user.getUser_password());
+		
+		System.out.println("user_code="+user_code);
+		if(user_code == null) {
+			sysUserService.insertUser(user.getUser_code(),user.getUser_name(),user.getUser_password());
+			map.put("msg", "注册成功");
+			return "customer";
+		}
+		map.put("msg", "账号已存在，请重新输入！");
+		return "zc";
+		
+	}
 	
 }
