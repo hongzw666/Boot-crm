@@ -19,6 +19,7 @@ public class SysUserServiceImpl implements SysUserService{
 	public SysUser findUser(String userCode, String userPassword) {
 		SysUser sysUser = sysUserMapper.findUser(userCode, userPassword);
 		return sysUser;
+		
 	}
 	@Override
 	public List<SysUser> findAllUser() {

@@ -32,10 +32,24 @@ public class SysUserController {
 		SysUser findUser = sysUserService.findUser(usercode,password);
 		System.out.println(findUser);
 		if (findUser != null) {
+			
 			session.setAttribute("USER_SESSION", findUser);
 			return "customer";
 		}
 		model.addAttribute("msg","账号或密码错误，请重新输入");
 		return "login";
 	} 
+	
+	@RequestMapping("/tocustomer")
+	public String tocustomer() {
+		
+		return "customer";
+	} 
+
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect : tologin";
+	} 
+	
 }

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.hong.Bootcrm.mapper.CustomerMapper;
 import com.hong.Bootcrm.mapper.SysUserMapper;
 import com.hong.Bootcrm.pojo.Customer;
 import com.hong.Bootcrm.pojo.SysUser;
@@ -26,6 +27,8 @@ public class BootCrmApplicationTests {
 	SysUserService sysUserService;
 	@Autowired
 	CustomerService customerService;
+	@Autowired
+	CustomerMapper customerMapper;
 
 
 	@Test
@@ -64,7 +67,19 @@ public class BootCrmApplicationTests {
 		
 	}
 	
-	
+	@Test
+	public void findUser() {
+		Customer customer = new Customer("1", 1,1, "1", "1", "1", "1", "1", "1", "1", "1",
+							  "2019-06-09 15:24:33");
+							 
+		
+		List<Customer> selectCustomerList = customerMapper.selectCustomerList(customer);
+		for (Customer customer2 : selectCustomerList) {
+			System.out.println(customer2);
+		}
+		
+	}
+		
 	
 	
 	

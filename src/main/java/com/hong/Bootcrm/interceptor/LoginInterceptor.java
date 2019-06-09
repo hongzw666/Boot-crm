@@ -20,8 +20,9 @@ public class LoginInterceptor implements HandlerInterceptor{
 			return true;
 		}
 		HttpSession session = request.getSession();
-		SysUser user = (SysUser) session.getAttribute("USER_SESSSION");
+		SysUser user = (SysUser) session.getAttribute("USER_SESSION");
 		if (user != null) {
+			request.getRequestDispatcher("WEB-INF/jsp/customer.jsp").forward(request, response);
 			return true;
 		}
 		request.setAttribute("msg", "您还没有登录，请先登录！");

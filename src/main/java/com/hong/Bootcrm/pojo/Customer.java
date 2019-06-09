@@ -14,6 +14,11 @@ public class Customer {
 	private String cust_zipcode;
 	private String cust_address;
 	private String cust_createtime;
+	private Integer start;
+	private Integer rows;
+	
+	public Customer() {
+	}
 
 	public String getCust_name() {
 		return cust_name;
@@ -117,6 +122,22 @@ public class Customer {
 
 	public void setCust_createtime(String cust_createtime) {
 		this.cust_createtime = cust_createtime;
+	}
+	
+	public Integer getStart() {
+		return start;
+	}
+
+	public void setStart(Integer start) {
+		this.start = start;
+	}
+
+	public Integer getRows() {
+		return rows;
+	}
+
+	public void setRows(Integer rows) {
+		this.rows = rows;
 	}
 
 	public Customer(String cname, int cuser_id, int ccreate_id, String csource, String cindustry, String clevel,
