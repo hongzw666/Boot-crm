@@ -43,7 +43,6 @@ public class CustomerController {
 	@RequestMapping("/list")
 	public String list(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer rows,
 			String custName, String custSource, String custIndustry, String custLevel, Model model) {
-		System.out.println("adfsd");
 		Page<Customer> customers = customerService.findCustomerList(page, rows, custName, custSource, custIndustry,
 				custLevel);
 		model.addAttribute("page", customers);
@@ -79,8 +78,9 @@ public class CustomerController {
 		if (customer != null) {
 			a = customerService.addCustomer(customer);
 		}
-
+		
 		if (a > 0) {
+			System.out.println("大师傅似的犯得上发射点");
 			return "OK";
 		} else {
 			return "F";

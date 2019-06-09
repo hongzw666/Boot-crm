@@ -460,6 +460,7 @@
 	        }
 	    });
 	}
+	
 	// 通过id获取修改的客户信息
 	function editCustomer(id) {
 	    $.ajax({
