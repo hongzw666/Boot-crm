@@ -1,5 +1,7 @@
 package com.hong.Bootcrm.pojo;
 
+import java.util.Date;
+
 public class Customer {
 	private int cust_id;
 	private String cust_name;
@@ -13,10 +15,10 @@ public class Customer {
 	private String cust_mobile;
 	private String cust_zipcode;
 	private String cust_address;
-	private String cust_createtime;
+	private Date cust_createtime;
 	private Integer start;
 	private Integer rows;
-	
+
 	public Customer() {
 	}
 
@@ -116,14 +118,14 @@ public class Customer {
 		this.cust_address = cust_address;
 	}
 
-	public String getCust_createtime() {
+	public Date getCust_createtime() {
 		return cust_createtime;
 	}
 
-	public void setCust_createtime(String cust_createtime) {
+	public void setCust_createtime(Date cust_createtime) {
 		this.cust_createtime = cust_createtime;
 	}
-	
+
 	public Integer getStart() {
 		return start;
 	}
@@ -141,7 +143,7 @@ public class Customer {
 	}
 
 	public Customer(String cname, int cuser_id, int ccreate_id, String csource, String cindustry, String clevel,
-			String clinkman, String cphone, String cmobile, String czipcode, String caddress, String ccreatetime) {
+			String clinkman, String cphone, String cmobile, String czipcode, String caddress, Date ccreatetime) {
 
 		this.cust_name = cname;
 		this.cust_user_id = cuser_id;

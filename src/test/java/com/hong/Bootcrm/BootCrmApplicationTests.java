@@ -1,5 +1,7 @@
 package com.hong.Bootcrm;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -30,7 +32,6 @@ public class BootCrmApplicationTests {
 	@Autowired
 	CustomerMapper customerMapper;
 
-
 	@Test
 	public void contextLoads() {
 
@@ -57,30 +58,33 @@ public class BootCrmApplicationTests {
 			System.out.println(sysUser);
 		}
 	}
-	
+
 	@Test
 	public void addCustomer() {
-		
-		Customer customer = new Customer("springboot中", 667, 668, "110", "112", "119", "springcloud", "400-6666666", "13300001111", "100866", "广州科贸", "2019-06-05 10:32:03");
-		
+
+		Date date = new Date();
+
+		Timestamp timestamp = new Timestamp(date.getTime());
+
+		Customer customer = new Customer("springboom", 888, 999, "110", "112", "119", "springGGG", "400-6666666",
+				"13300001111", "100866", "广州科贸", timestamp);
+
 		customerService.addCustomer(customer);
-		
+
 	}
-	
+
 	@Test
 	public void findUser() {
-		Customer customer = new Customer("1", 1,1, "1", "1", "1", "1", "1", "1", "1", "1",
-							  "2019-06-09 15:24:33");
-							 
-		
+		Date date = new Date();
+
+		Timestamp timestamp = new Timestamp(date.getTime());
+
+		Customer customer = new Customer("1", 1, 1, "1", "1", "1", "1", "1", "1", "1", "1", timestamp);
 		List<Customer> selectCustomerList = customerMapper.selectCustomerList(customer);
 		for (Customer customer2 : selectCustomerList) {
 			System.out.println(customer2);
 		}
-		
+
 	}
-		
-	
-	
-	
+
 }
