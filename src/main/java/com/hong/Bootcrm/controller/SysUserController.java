@@ -1,5 +1,7 @@
 package com.hong.Bootcrm.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,12 +26,13 @@ public class SysUserController {
 	
 	
 	@RequestMapping("/login")
-	public String login(String usercode,String password,Model model) {
+	public String login(String usercode,String password,Model model,HttpSession session) {
 		System.out.println(usercode);
 		System.out.println(password);
 		SysUser findUser = sysUserService.findUser(usercode,password);
 		System.out.println(findUser);
 		if (findUser != null) {
+			session.setAttribute("USER_SESSION", findUser);
 			return "customer";
 		}
 		model.addAttribute("msg","账号或密码错误，请重新输入");
