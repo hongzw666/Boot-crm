@@ -50,7 +50,7 @@ function check(){
 	 <!-- margin:0px auto; 控制当前标签居中 -->
 	 <fieldset style="width: auto; margin: 0px auto;">
 		  <legend>
-		     <font style="font-size:15px" face="宋体">
+		     <font style="font-size:15px" face="宋体 " color="white">
 		          欢迎使用BOOT客户管理系统
 		     </font>
 		  </legend> 
@@ -62,17 +62,17 @@ function check(){
 		<form action="${pageContext.request.contextPath }/login" 
 			                       method="post" onsubmit="return check()">
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
-          账&nbsp;号：<input id="usercode" type="text" name="usercode" />
+          <span style="color: white;">账&nbsp;号：</span><input id="usercode" type="text" name="usercode" />
           <br /><br />
-          密&nbsp;码：<input id="password" type="password" name="password" />
+         <span style="color: white;"> 密&nbsp;码：</span><input id="password" type="password" name="password" />
           <br /><br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <center><input type="submit" value="登录" /></center>
+          <center><input style="color: white;" type="submit" value="登录" /></center>
 		 </form>
 		  <form action="${pageContext.request.contextPath }/zc" 
 			                       method="post">
 			                       &nbsp;&nbsp;&nbsp;
-		 <center><input type="submit" value="注册" "/></center>
+		 <center><input type="submit" style="color: white;" value="注册" "/></center>
 	 </fieldset>
 	</td>
 	</tr>

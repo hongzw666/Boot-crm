@@ -29,7 +29,7 @@ var particles = void 0;
 function setup() {
 	canvas = document.createElement('canvas');
 	ctx = canvas.getContext('2d');
-	canvas.style = '\n\t\tposition: absolute;\n\t\ttop: 0;\n\t\tleft: 0;\n\t\twidth: 100%;\n\t\theight: 100%;\n\t';
+	canvas.style = '\n\t\tposition: absolute;\n\t\ttop: 0;\n\t\tleft: 0;\n\t\twidth: 57%;\n\t\theight: 100%;\n\t';
 
 
 
