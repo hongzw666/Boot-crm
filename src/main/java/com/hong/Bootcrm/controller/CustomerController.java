@@ -98,4 +98,31 @@ public class CustomerController {
 				return "F";
 			}
 		}
+		
+	/**
+	 * 根据id获取客户信息
+	 */
+		@RequestMapping("/customer/getCustomerById")
+		@ResponseBody
+		public Customer customergetCustomerById(Integer id) {
+			
+			Customer customer = customerService.getCustomerById(id);
+			return customer;
+		}
+		
+		/*
+		 *更新客户 
+		 */
+		@RequestMapping("/customer/update")
+		@ResponseBody
+		public String customerupdate(Customer customer) {
+			
+			int rows = customerService.updateCustomer(customer);
+			if (rows > 0) {
+				return "OK";
+			} else {
+				return "FAIL";
+			}
+		}
+		
 }
