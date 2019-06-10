@@ -12,15 +12,16 @@ import com.hong.Bootcrm.service.BaseDictService;
 
 @Service("baseDictService")
 @Transactional
-public class BaseDictServiceImpl implements BaseDictService{
+public class BaseDictServiceImpl implements BaseDictService {
 
 	@Autowired
 	private BaseDictMapper baseDictMapper;
-	
-	//根据类别代码查询数据字典
+
+	// 根据类别代码查询数据字典
 	@Override
 	public List<BaseDict> findBaseDictByTypeCode(String typecode) {
+
 		return baseDictMapper.selecBaseDictListByTypeCode(typecode);
 	}
-	
+
 }

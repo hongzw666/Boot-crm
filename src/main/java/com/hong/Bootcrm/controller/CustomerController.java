@@ -43,6 +43,7 @@ public class CustomerController {
 	@RequestMapping("/list")
 	public String list(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer rows,
 			String custName, String custSource, String custIndustry, String custLevel, Model model) {
+
 		Page<Customer> customers = customerService.findCustomerList(page, rows, custName, custSource, custIndustry,
 				custLevel);
 		model.addAttribute("page", customers);
@@ -78,51 +79,51 @@ public class CustomerController {
 		if (customer != null) {
 			a = customerService.addCustomer(customer);
 		}
-		
+
 		if (a > 0) {
-			System.out.println("大师傅似的犯得上发射点");
 			return "OK";
 		} else {
 			return "F";
 		}
 	}
+
 	// 删除客户
-		@RequestMapping("/customer/delete")
-		@ResponseBody
-		public String customerDelete(Integer id) {
-			
-			int rows = customerService.deleteCustomer(id);
-			if (rows > 0) {
-				return "OK";
-			} else {
-				return "F";
-			}
+	@RequestMapping("/customer/delete")
+	@ResponseBody
+	public String customerDelete(Integer id) {
+
+		int rows = customerService.deleteCustomer(id);
+		if (rows > 0) {
+			return "OK";
+		} else {
+			return "F";
 		}
-		
+	}
+
 	/**
 	 * 根据id获取客户信息
 	 */
-		@RequestMapping("/customer/getCustomerById")
-		@ResponseBody
-		public Customer customergetCustomerById(Integer id) {
-			
-			Customer customer = customerService.getCustomerById(id);
-			return customer;
+	@RequestMapping("/customer/getCustomerById")
+	@ResponseBody
+	public Customer customergetCustomerById(Integer id) {
+
+		Customer customer = customerService.getCustomerById(id);
+		return customer;
+	}
+
+	/*
+	 * 更新客户
+	 */
+	@RequestMapping("/customer/update")
+	@ResponseBody
+	public String customerupdate(Customer customer) {
+
+		int rows = customerService.updateCustomer(customer);
+		if (rows > 0) {
+			return "OK";
+		} else {
+			return "FAIL";
 		}
-		
-		/*
-		 *更新客户 
-		 */
-		@RequestMapping("/customer/update")
-		@ResponseBody
-		public String customerupdate(Customer customer) {
-			
-			int rows = customerService.updateCustomer(customer);
-			if (rows > 0) {
-				return "OK";
-			} else {
-				return "FAIL";
-			}
-		}
-		
+	}
+
 }

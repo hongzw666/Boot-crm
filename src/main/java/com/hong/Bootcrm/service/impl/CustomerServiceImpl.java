@@ -17,11 +17,6 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired
 	private CustomerMapper customerMapper;
-	//增加用户
-	@Override
-	public int addCustomer(Customer customer) {
-		return customerMapper.addCustomer(customer);
-	}
 	
 	//客户列表
 	@Override
@@ -32,13 +27,13 @@ public class CustomerServiceImpl implements CustomerService {
 			customer.setCust_name(custName);
 		}
 		if (StringUtils.isNotBlank(custSource)) {
-			customer.setCust_name(custSource);
+			customer.setCust_source(custSource);
 		}
 		if (StringUtils.isNotBlank(custIndustry)) {
-			customer.setCust_name(custIndustry);
+			customer.setCust_industry(custIndustry);
 		}
 		if (StringUtils.isNotBlank(custLevel)) {
-			customer.setCust_name(custLevel);
+			customer.setCust_level(custLevel);
 		}
 		customer.setStart((page-1) * rows);
 		customer.setRows(rows);
@@ -51,6 +46,13 @@ public class CustomerServiceImpl implements CustomerService {
 		result.setTotal(count);
 		return result;
 	}
+	
+	//增加用户
+	@Override
+	public int addCustomer(Customer customer) {
+		return customerMapper.addCustomer(customer);
+	}
+		
 
 	@Override
 	public int deleteCustomer(Integer id) {
