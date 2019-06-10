@@ -104,7 +104,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		update customer
 		<set>
 			<if test="cust_name != null">
-				cust_name = #{cust——name},
+				cust_name = #{cust_name},
 			</if>
 			<if test="cust_user_id != null">
 				cust_user_id = #{cust_user_id},
