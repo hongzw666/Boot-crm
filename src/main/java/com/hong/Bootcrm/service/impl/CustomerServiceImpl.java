@@ -61,7 +61,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public Customer getCustomerById(Integer id) {
 		
-		return customerMapper.getCustomer(id);
+		return customerMapper.getCustomerById(id);
 	}
 
 	@Override
