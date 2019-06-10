@@ -28,7 +28,7 @@ public class SysUserServiceImpl implements SysUserService{
 	}
 	@Override
 	public int insertUser(String user_code, String user_name, String user_password) {
-		// TODO Auto-generated method stub
+		sysUserMapper.insertUser(user_code, user_name, user_password);
 		return 0;
 	}
 

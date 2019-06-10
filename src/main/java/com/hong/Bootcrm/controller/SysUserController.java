@@ -55,21 +55,19 @@ public class SysUserController {
 	
 	@RequestMapping("/zc")
 	public String tozc() {
-		return "zc";
+		return "register";
 	} 
 	
 	@RequestMapping("/success")
-	public String zc(SysUser user,Map<String,Object> map) {
-		SysUser user_code=sysUserService.findUser(user.getUser_code() ,user.getUser_password());
-		
-		System.out.println("user_code="+user_code);
-		if(user_code == null) {
-			sysUserService.insertUser(user.getUser_code(),user.getUser_name(),user.getUser_password());
+	public String zc(String user_code,String user_name,String uesr_password,Map<String,Object> map) {
+		SysUser sysUser=sysUserService.findUser(user_code,uesr_password);
+		if(sysUser == null) {
+			sysUserService.insertUser( user_code, user_name, uesr_password);
 			map.put("msg", "注册成功");
-			return "customer";
+			return "login";
 		}
 		map.put("msg", "账号已存在，请重新输入！");
-		return "zc";
+		return "register";
 		
 	}
 	
