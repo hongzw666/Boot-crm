@@ -14,11 +14,8 @@ public interface CustomerMapper {
 
 	public int deleteCustomer(Integer id);
 	
-<<<<<<< HEAD
 	public Customer getCustomer(Integer id);
 	
-=======
->>>>>>> branch 'master' of https://github.com/hongzw666/Boot-crm.git
 	public int UpdateCustomer(Customer customer);
 	
 }
