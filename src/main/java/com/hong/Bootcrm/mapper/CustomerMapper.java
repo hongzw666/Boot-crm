@@ -14,5 +14,8 @@ public interface CustomerMapper {
 
 	public int deleteCustomer(Integer id);
 	
-
+	public Customer getCustomer(Integer id);
+	
+	public int UpdateCustomer(Customer customer);
+	
 }
