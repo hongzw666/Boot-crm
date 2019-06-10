@@ -61,13 +61,13 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public Customer getCustomerById(Integer id) {
 		
-		return customerMapper.getCustomerById(id);
+		return customerMapper.getCustomer(id);
 	}
 
 	@Override
 	public int updateCustomer(Customer customer) {
 		
-		return customerMapper.updateCustomer(customer);
+		return customerMapper.UpdateCustomer(customer);
 	}
 
 }
