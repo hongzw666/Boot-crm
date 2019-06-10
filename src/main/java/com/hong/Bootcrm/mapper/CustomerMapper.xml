@@ -95,9 +95,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</delete>
 	
 	<!-- 更新用户 -->
+<<<<<<< HEAD
 	<select id="getCustomerById" parameterType="Integer" resultType="customer">
 		select * from customer where cust_id = #{id}
 	</select>
+=======
+>>>>>>> branch 'master' of https://github.com/hongzw666/Boot-crm.git
 	<update id="UpdateCustomer" parameterType="customer">
 		update customer
 		<set>
