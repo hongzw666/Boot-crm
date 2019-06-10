@@ -4,14 +4,22 @@
 <html>
 <head>
 <title>登录页面</title>
+
+<style type="text/css">
+	html, body {
+	overflow: hidden;
+	background: black;
+}
+
+</style>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <link href="${pageContext.request.contextPath}/css/style.css"
 	   type=text/css rel=stylesheet>
 <link href="${pageContext.request.contextPath}/css/boot-crm.css"
 	   type=text/css rel=stylesheet>
-<script src=
-       "${pageContext.request.contextPath}/js/jquery-1.11.3.min.js">
-</script>
+<script src= "${pageContext.request.contextPath}/js/beijing.js"/>
+<script src= "${pageContext.request.contextPath}/js/jquery-1.11.3.min.js"/>
+
 <meta content="MSHTML 6.00.2600.0" name=GENERATOR>
 <script>
 // 判断是登录账号和密码是否为空
@@ -26,8 +34,7 @@ function check(){
 }
 </script>
 </head>
-<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0"
-	background="${pageContext.request.contextPath}/images/rightbg.jpg">
+<body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0" >
 <div ALIGN="center">
 <table border="0" width="1140px" cellspacing="0" cellpadding="0"
                                                            id="table1">
@@ -36,7 +43,7 @@ function check(){
 		<td></td>
 	</tr>
 	<tr>
-   <td background="${pageContext.request.contextPath}/images/rights.jpg"
+   <td
 		width="740" height="412">
    </td>
    <td class="login_msg" width="400" align="center">
