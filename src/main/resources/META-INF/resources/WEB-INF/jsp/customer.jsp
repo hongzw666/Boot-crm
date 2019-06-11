@@ -15,18 +15,40 @@
 <title>客户管理-BootCRM</title>
 <!-- 引入css样式文件 -->
 <!-- Bootstrap Core CSS -->
-<link href="<%=basePath%>css/bootstrap.min.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/bootstrap.min.css"
+	rel="stylesheet" />
 <!-- MetisMenu CSS -->
-<link href="<%=basePath%>css/metisMenu.min.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/metisMenu.min.css"
+	rel="stylesheet" />
 <!-- DataTables CSS -->
-<link href="<%=basePath%>css/dataTables.bootstrap.css" rel="stylesheet" />
+<link
+	href="${pageContext.request.contextPath}/css/dataTables.bootstrap.css"
+	rel="stylesheet" />
 <!-- Custom CSS -->
-<link href="<%=basePath%>css/sb-admin-2.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/css/sb-admin-2.css"
+	rel="stylesheet" />
 <!-- Custom Fonts -->
-<link href="<%=basePath%>css/font-awesome.min.css" rel="stylesheet"
-	type="text/css" />
-<link href="<%=basePath%>css/boot-crm.css" rel="stylesheet"
-	type="text/css" />
+<link href="${pageContext.request.contextPath}/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/boot-crm.css"
+	rel="stylesheet" type="text/css" />
+
+<!-- 引入js文件 -->
+<!-- jQuery -->
+<script src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js" />
+<!-- Bootstrap Core JavaScript -->
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js" />
+<!-- Metis Menu Plugin JavaScript -->
+<script src="${pageContext.request.contextPath}/js/metisMenu.min.js" />
+<!-- DataTables JavaScript -->
+<script
+	src="${pageContext.request.contextPath}/js/jquery.dataTables.min.js" />
+<script
+	src="${pageContext.request.contextPath}/js/dataTables.bootstrap.min.js" />
+<!-- Custom Theme JavaScript -->
+<script src="${pageContext.request.contextPath}/js/sb-admin-2.js" />
+
+
 </head>
 <body>
 	<div id="wrapper">
@@ -421,18 +443,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- 引入js文件 -->
-	<!-- jQuery -->
-	<script src="<%=basePath%>js/jquery-1.11.3.min.js"></script>
-	<!-- Bootstrap Core JavaScript -->
-	<script src="<%=basePath%>js/bootstrap.min.js"></script>
-	<!-- Metis Menu Plugin JavaScript -->
-	<script src="<%=basePath%>js/metisMenu.min.js"></script>
-	<!-- DataTables JavaScript -->
-	<script src="<%=basePath%>js/jquery.dataTables.min.js"></script>
-	<script src="<%=basePath%>js/dataTables.bootstrap.min.js"></script>
-	<!-- Custom Theme JavaScript -->
-	<script src="<%=basePath%>js/sb-admin-2.js"></script>
+
 	<!-- 编写js代码 -->
 	<script type="text/javascript">
 //清空新建客户窗口中的数据
