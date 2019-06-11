@@ -7,15 +7,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		resultType="sysUser">
 		select * from sys_user where
 		user_code = #{userCode}
-		and user_password = #{userPassword}
+		and
+		user_password = #{userPassword}
 		and user_state = '1'
 	</select>
-	<select  id="findAllUser" 
-		resultType="sysUser">
-	select * from sys_user ; 
+	<select id="findAllUser" resultType="sysUser">
+		select * from sys_user ;
 	</select>
 	<insert id="insertUser" parameterType="String">
-		insert into sys_user(user_code,user_name,user_password,user_state) value(#{user_code},#{user_name},#{user_password},1)
+		insert into
+		sys_user(user_code,user_name,user_password,user_state)
+		value(#{user_code},#{user_name},#{user_password},1)
 	</insert>
 
 </mapper>
