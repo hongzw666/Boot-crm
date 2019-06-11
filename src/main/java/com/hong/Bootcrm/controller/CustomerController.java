@@ -65,7 +65,7 @@ public class CustomerController {
 	}
 
 	// 添加客户
-	@RequestMapping("/customer/create")
+	@RequestMapping("/create")
 	@ResponseBody
 	public String customerCreate(Customer customer, HttpSession session) {
 
@@ -88,7 +88,7 @@ public class CustomerController {
 	}
 
 	// 删除客户
-	@RequestMapping("/customer/delete")
+	@RequestMapping("/delete")
 	@ResponseBody
 	public String customerDelete(Integer id) {
 
@@ -103,7 +103,7 @@ public class CustomerController {
 	/**
 	 * 根据id获取客户信息
 	 */
-	@RequestMapping("/customer/getCustomerById")
+	@RequestMapping("/getCustomerById")
 	@ResponseBody
 	public Customer customergetCustomerById(Integer id) {
 
@@ -114,7 +114,7 @@ public class CustomerController {
 	/*
 	 * 更新客户
 	 */
-	@RequestMapping("/customer/update")
+	@RequestMapping("/update")
 	@ResponseBody
 	public String customerupdate(Customer customer) {
 

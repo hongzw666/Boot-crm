@@ -449,7 +449,7 @@
 	}
 	// 创建客户
 	function createCustomer() {
-	$.post("<%=basePath%>customer/create",
+	$.post("<%=basePath%>/create",
 	$("#new_customer_form").serialize(),function(data){
 	        if(data =="OK"){
 	            alert("客户创建成功！");
@@ -465,7 +465,7 @@
 	function editCustomer(id) {
 	    $.ajax({
 	        type:"get",
-	        url:"<%=basePath%>customer/getCustomerById",
+	        url:"<%=basePath%>/getCustomerById",
 	        data:{"id":id},
 	        success:function(data) {
 	            $("#edit_cust_id").val(data.cust_id);
@@ -484,7 +484,7 @@
 	}
     // 执行修改客户操作
 	function updateCustomer() {
-		$.post("<%=basePath%>customer/update",$("#edit_customer_form").serialize(),function(data){
+		$.post("<%=basePath%>/update",$("#edit_customer_form").serialize(),function(data){
 			if(data =="OK"){
 				alert("客户信息更新成功！");
 				window.location.reload();
@@ -497,7 +497,7 @@
 	// 删除客户
 	function deleteCustomer(id) {
 	    if(confirm('确实要删除该客户吗?')) {
-	$.post("<%=basePath%>customer/delete",{"id":id},
+	$.post("<%=basePath%>/delete",{"id":id},
 	function(data){
 	            if(data =="OK"){
 	                alert("客户删除成功！");
