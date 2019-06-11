@@ -10,15 +10,16 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class DefaultView implements WebMvcConfigurer{
 	@Autowired 
 	private LoginInterceptor loginInterceptor;
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(loginInterceptor)
-		.addPathPatterns("/**").excludePathPatterns("/getCustomerById","/update","/success","/zc","/delete","/create","/list","/tologin","/login","/css/**","/js/**","/fonts/**","/images/**");
-	}
 	
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("login");
 		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+	}
+	
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(loginInterceptor)
+		.addPathPatterns("/**").excludePathPatterns("/getCustomerById","/update","/success","/zc","/delete","/create","/list","/tologin","/login","/css/**","/js/**","/fonts/**","/images/**");
 	}
 }

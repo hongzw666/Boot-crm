@@ -34,7 +34,7 @@ public class SysUserController {
 		System.out.println(findUser);
 		if (findUser != null) {
 			session.setAttribute("USER_SESSION", findUser);
-			return "redirect : /list";
+			return "list";
 		}
 		model.addAttribute("msg", "账号或密码错误，请重新输入");
 		return "login";
@@ -49,7 +49,7 @@ public class SysUserController {
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "redirect : tologin";
+		return "redirect:tologin";
 	}
 
 	@RequestMapping("/zc")
