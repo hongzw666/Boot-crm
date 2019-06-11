@@ -34,7 +34,7 @@ public class SysUserController {
 		System.out.println(findUser);
 		if (findUser != null) {
 			session.setAttribute("USER_SESSION", findUser);
-			return "redirect : list";
+			return "redirect : /list";
 		}
 		model.addAttribute("msg", "账号或密码错误，请重新输入");
 		return "login";
