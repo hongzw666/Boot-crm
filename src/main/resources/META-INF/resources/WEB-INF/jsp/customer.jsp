@@ -15,22 +15,22 @@
 <title>客户管理-BootCRM</title>
 <!-- 引入css样式文件 -->
 <!-- Bootstrap Core CSS -->
-<link href="<%=basePath%>css/bootstrap.min.css"
+<link href="${pageContext.request.contextPath}/css/bootstrap.min.css"
 	rel="stylesheet" />
 <!-- MetisMenu CSS -->
-<link href="<%=basePath%>css/metisMenu.min.css"
+<link href="${pageContext.request.contextPath}/css/metisMenu.min.css"
 	rel="stylesheet" />
 <!-- DataTables CSS -->
 <link
-	href="<%=basePath%>css/dataTables.bootstrap.css"
+	href="${pageContext.request.contextPath}/css/dataTables.bootstrap.css"
 	rel="stylesheet" />
 <!-- Custom CSS -->
-<link href="<%=basePath%>css/sb-admin-2.css"
+<link href="${pageContext.request.contextPath}/css/sb-admin-2.css"
 	rel="stylesheet" />
 <!-- Custom Fonts -->
-<link href="<%=basePath%>css/font-awesome.min.css"
+<link href="${pageContext.request.contextPath}/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css" />
-<link href="<%=basePath%>css/boot-crm.css"
+<link href="${pageContext.request.contextPath}/css/boot-crm.css"
 	rel="stylesheet" type="text/css" />
 
 </head>
