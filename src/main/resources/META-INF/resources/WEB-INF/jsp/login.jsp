@@ -21,16 +21,16 @@ html, body {
 
 <meta content="MSHTML 6.00.2600.0" name=GENERATOR>
 <script>
-// 判断是登录账号和密码是否为空
-function check(){
-    var usercode = $("#usercode").val();
-    var password = $("#password").val();
-    if(usercode=="" || password==""){
-    	$("#message").text("账号或密码不能为空！");
-        return false;
-    }  
-    return true;
-}
+	// 判断是登录账号和密码是否为空
+	function check() {
+		var usercode = $("#usercode").val();
+		var password = $("#password").val();
+		if (usercode == "" || password == "") {
+			$("#message").text("账号或密码不能为空！");
+			return false;
+		}
+		return true;
+	}
 </script>
 </head>
 <body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0">
@@ -55,12 +55,12 @@ function check(){
 						<%-- 提交后的位置：/WEB-INF/jsp/customer.jsp--%>
 						<form action="${pageContext.request.contextPath }/login"
 							method="post" onsubmit="return check()">
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
-							<br /> <span style="color: white;">账&nbsp;号：</span><input
-								id="usercode" type="text" name="usercode" /> <br />
-							<br /> <span style="color: white;"> 密&nbsp;码：</span><input
-								id="password" type="password" name="password" /> <br />
-							<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> <br /> <span
+								style="color: white;">账&nbsp;号：</span><input id="usercode"
+								type="text" name="usercode" /> <br /> <br /> <span
+								style="color: white;"> 密&nbsp;码：</span><input id="password"
+								type="password" name="password" /> <br /> <br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<center>
 								<input style="color: white;" type="submit" value="登录" />
 							</center>
@@ -71,6 +71,7 @@ function check(){
 							<center>
 								<input type="submit" style="color: white;" value="注册" "/>
 							</center>
+						</form>
 					</fieldset>
 				</td>
 			</tr>
