@@ -13,7 +13,7 @@ public class DefaultView implements WebMvcConfigurer{
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(loginInterceptor)
-		.addPathPatterns("/**").excludePathPatterns("/customer/getCustomerById","/customer/update","/success","/zc","/customer/delete","/customer/create","/list","/tologin","/login","/css/**","/js/**","/fonts/**","/images/**");
+		.addPathPatterns("/**").excludePathPatterns("/getCustomerById","/update","/success","/zc","/delete","/create","/list","/tologin","/login","/css/**","/js/**","/fonts/**","/images/**");
 	}
 	
 	@Override
