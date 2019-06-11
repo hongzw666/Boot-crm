@@ -5,6 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.hong.Bootcrm.mapper.BaseDictMapper">
 	<select id="selecBaseDictListByTypeCode" resultType="baseDict"
 		parameterType="String">
-		select * from base_dict where dict_type_code = #{typecode}
+		select * from base_dict where dict_type_code =
+		#{typecode}
 	</select>
 </mapper>

@@ -61,12 +61,11 @@ function check(){
 									method="post" onsubmit="return check()">
 
 									账&nbsp;号：<input id="user_code" type="text" name="user_code"
-										placeholder="请输入账号" /><br />
-									<br /> 姓&nbsp;名：<input type="text" placeholder="请输入姓名"
-										id="user_name" name="user_name" /></br>
-									<br /> 密&nbsp;码：<input id="uesr_password" type="password"
-										name="uesr_password" placeholder="请输入密码" /><br />
-									<br />
+										placeholder="请输入账号" /><br /> <br /> 姓&nbsp;名：<input
+										type="text" placeholder="请输入姓名" id="user_name"
+										name="user_name" /></br> <br /> 密&nbsp;码：<input
+										id="uesr_password" type="password" name="uesr_password"
+										placeholder="请输入密码" /><br /> <br />
 
 									<center>
 										<input type="submit" value="注册"
