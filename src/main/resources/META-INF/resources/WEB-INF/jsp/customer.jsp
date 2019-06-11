@@ -33,22 +33,6 @@
 <link href="<%=basePath%>css/boot-crm.css"
 	rel="stylesheet" type="text/css" />
 
-<!-- 引入js文件 -->
-<!-- jQuery -->
-<script src="<%=basePath%>js/jquery-1.11.3.min.js" />
-<!-- Bootstrap Core JavaScript -->
-<script src="<%=basePath%>js/bootstrap.min.js" />
-<!-- Metis Menu Plugin JavaScript -->
-<script src="<%=basePath%>js/metisMenu.min.js" />
-<!-- DataTables JavaScript -->
-<script
-	src="<%=basePath%>js/jquery.dataTables.min.js" />
-<script
-	src="<%=basePath%>js/dataTables.bootstrap.min.js" />
-<!-- Custom Theme JavaScript -->
-<script src="<%=basePath%>js/sb-admin-2.js" />
-
-
 </head>
 <body>
 	<div id="wrapper">
@@ -443,7 +427,20 @@
 			</div>
 		</div>
 	</div>
-
+<!-- 引入js文件 -->
+<!-- jQuery -->
+<script src="<%=basePath%>js/jquery-1.11.3.min.js" />
+<!-- Bootstrap Core JavaScript -->
+<script src="<%=basePath%>js/bootstrap.min.js" />
+<!-- Metis Menu Plugin JavaScript -->
+<script src="<%=basePath%>js/metisMenu.min.js" />
+<!-- DataTables JavaScript -->
+<script
+	src="<%=basePath%>js/jquery.dataTables.min.js" />
+<script
+	src="<%=basePath%>js/dataTables.bootstrap.min.js" />
+<!-- Custom Theme JavaScript -->
+<script src="<%=basePath%>js/sb-admin-2.js" />
 	<!-- 编写js代码 -->
 	<script type="text/javascript">
 //清空新建客户窗口中的数据
