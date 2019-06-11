@@ -429,18 +429,18 @@
 	</div>
 <!-- 引入js文件 -->
 <!-- jQuery -->
-<script src="<%=basePath%>js/jquery-1.11.3.min.js" />
+<script src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js" />
 <!-- Bootstrap Core JavaScript -->
-<script src="<%=basePath%>js/bootstrap.min.js" />
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js" />
 <!-- Metis Menu Plugin JavaScript -->
-<script src="<%=basePath%>js/metisMenu.min.js" />
+<script src="${pageContext.request.contextPath}/js/metisMenu.min.js" />
 <!-- DataTables JavaScript -->
 <script
-	src="<%=basePath%>js/jquery.dataTables.min.js" />
+	src="${pageContext.request.contextPath}/js/jquery.dataTables.min.js" />
 <script
-	src="<%=basePath%>js/dataTables.bootstrap.min.js" />
+	src="${pageContext.request.contextPath}/js/dataTables.bootstrap.min.js" />
 <!-- Custom Theme JavaScript -->
-<script src="<%=basePath%>js/sb-admin-2.js" />
+<script src="${pageContext.request.contextPath}/js/sb-admin-2.js" />
 	<!-- 编写js代码 -->
 	<script type="text/javascript">
 //清空新建客户窗口中的数据
@@ -457,7 +457,7 @@
 	}
 	// 创建客户
 	function createCustomer() {
-	$.post("<%=basePath%>/create",
+	$.post("${pageContext.request.contextPath}/create",
 	$("#new_customer_form").serialize(),function(data){
 	        if(data =="OK"){
 	            alert("客户创建成功！");
@@ -473,7 +473,7 @@
 	function editCustomer(id) {
 	    $.ajax({
 	        type:"get",
-	        url:"<%=basePath%>/getCustomerById",
+	        url:"${pageContext.request.contextPath}/getCustomerById",
 	        data:{"id":id},
 	        success:function(data) {
 	            $("#edit_cust_id").val(data.cust_id);
@@ -492,7 +492,7 @@
 	}
     // 执行修改客户操作
 	function updateCustomer() {
-		$.post("<%=basePath%>/update",$("#edit_customer_form").serialize(),function(data){
+		$.post("${pageContext.request.contextPath}/update",$("#edit_customer_form").serialize(),function(data){
 			if(data =="OK"){
 				alert("客户信息更新成功！");
 				window.location.reload();
@@ -505,7 +505,7 @@
 	// 删除客户
 	function deleteCustomer(id) {
 	    if(confirm('确实要删除该客户吗?')) {
-	$.post("<%=basePath%>/delete",{"id":id},
+	$.post("${pageContext.request.contextPath}/delete",{"id":id},
 	function(data){
 	            if(data =="OK"){
 	                alert("客户删除成功！");
