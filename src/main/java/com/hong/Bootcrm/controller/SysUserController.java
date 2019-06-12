@@ -5,9 +5,11 @@ import java.util.Map;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jmx.support.MetricType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.hong.Bootcrm.pojo.SysUser;
 import com.hong.Bootcrm.service.SysUserService;
@@ -19,10 +21,10 @@ public class SysUserController {
 
 	@RequestMapping("/tologin")
 	public String tologin() {
-		return "login";
+		return "/login";
 	}
 
-	@RequestMapping("/login")
+	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(String usercode, String password, Model model, HttpSession session) {
 		System.out.println("登录的账号：" + usercode);
 		System.out.println("登录的密码：" + password);
