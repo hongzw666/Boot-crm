@@ -15,6 +15,7 @@ import com.hong.Bootcrm.pojo.SysUser;
 import com.hong.Bootcrm.service.SysUserService;
 
 @Controller
+@RequestMapping("/Boot_crm")
 public class SysUserController {
 	@Autowired
 	private SysUserService sysUserService;

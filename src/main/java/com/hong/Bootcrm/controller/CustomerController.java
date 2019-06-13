@@ -22,6 +22,7 @@ import com.hong.Bootcrm.service.CustomerService;
 import com.hong.Bootcrm.utils.Page;
 
 @Controller
+@RequestMapping("/Boot_crm")
 public class CustomerController {
 	@Autowired
 	private CustomerService customerService;

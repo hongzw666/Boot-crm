@@ -12,11 +12,11 @@
 }
 </style>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<link href="${pageContext.request.contextPath}/css/style.css"
+<link href="${pageContext.request.contextPath}/Boot_crm/css/style.css"
 	type=text/css rel=stylesheet>
-<link href="${pageContext.request.contextPath}/css/boot-crm.css"
+<link href="${pageContext.request.contextPath}/Boot_crm/css/boot-crm.css"
 	type=text/css rel=stylesheet>
-<script src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js">
+<script src="${pageContext.request.contextPath}/Boot_crm/js/jquery-1.11.3.min.js">
 </script>
 <meta content="MSHTML 6.00.2600.0" name=GENERATOR>
 <script>
@@ -34,7 +34,7 @@ function check(){
 </script>
 </head>
 <body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0"
-	background="${pageContext.request.contextPath}/images/rightbg.jpg">
+	background="${pageContext.request.contextPath}/Boot_crm/images/rightbg.jpg">
 	<div ALIGN="center">
 		<table border="0" width="1140px" cellspacing="0" cellpadding="0"
 			id="table1">
@@ -44,7 +44,7 @@ function check(){
 			</tr>
 			<tr>
 				<td
-					background="${pageContext.request.contextPath}/images/rights.jpg"
+					background="${pageContext.request.contextPath}/Boot_crm/images/rights.jpg"
 					width="740" height="412"></td>
 				<td class="login_msg" width="400" align="center">
 					<!-- margin:0px auto; 控制当前标签居中 -->
@@ -57,7 +57,7 @@ function check(){
 						<%-- 提交后的位置：/WEB-INF/jsp/customer.jsp--%>
 						<div id="tian">
 							<label>
-								<form action="${pageContext.request.contextPath }/success"
+								<form action="${pageContext.request.contextPath }/Boot_crm/success"
 									method="post" onsubmit="return check()">
 
 									账&nbsp;号：<input id="user_code" type="text" name="user_code"

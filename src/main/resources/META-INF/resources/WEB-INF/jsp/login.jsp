@@ -53,7 +53,7 @@ html, body {
 						<font color="red"> <%-- 提示信息--%> <span id="message">${msg}</span>
 						</font>
 						<%-- 提交后的位置：/WEB-INF/jsp/customer.jsp--%>
-						<form action="${pageContext.request.contextPath }/login"
+						<form action="${pageContext.request.contextPath }/Boot_crm/login"
 							method="post" onsubmit="return check()">
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /> <br /> <span
 								style="color: white;">账&nbsp;号：</span><input id="usercode"
@@ -65,7 +65,7 @@ html, body {
 								<input style="color: white;" type="submit" value="登录" />
 							</center>
 						</form>
-						<form action="${pageContext.request.contextPath }/zc"
+						<form action="${pageContext.request.contextPath }/Boot_crm/zc"
 							method="post">
 							&nbsp;&nbsp;&nbsp;
 							<center>
