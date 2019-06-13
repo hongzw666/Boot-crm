@@ -62,14 +62,14 @@ html, body {
 								type="password" name="password" /> <br /> <br />
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<center>
-								<input style="color: white;" type="submit" value="登录" />
+								<input style="color: black;" type="submit" value="登录" />
 							</center>
 						</form>
 						<form action="${pageContext.request.contextPath }/Boot_crm/zc"
 							method="post">
 							&nbsp;&nbsp;&nbsp;
 							<center>
-								<input type="submit" style="color: white;" value="注册" "/>
+								<input type="submit" style="color: black;" value="注册" "/>
 							</center>
 						</form>
 					</fieldset>
