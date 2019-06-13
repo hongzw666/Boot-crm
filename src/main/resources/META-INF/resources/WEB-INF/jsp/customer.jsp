@@ -70,7 +70,7 @@
 					<ul class="dropdown-menu dropdown-user">
 						<li><a href="#"><i class="fa fa-user fa-fw"></i>
 								用户：${USER_SESSION.user_name} </a></li>
-						<li><a href="${pageContext.request.contextPath }/logout">
+						<li><a href="${pageContext.request.contextPath }/Boot_crm/logout">
 								<i class="fa fa-sign-out fa-fw"></i>退出登录
 						</a></li>
 					</ul></li>
