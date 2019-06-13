@@ -12,12 +12,12 @@ html, body {
 }
 </style>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<link href="${pageContext.request.contextPath}/css/style.css"
+<link href="${pageContext.request.contextPath}/Boot_crm/css/style.css"
 	type=text/css rel=stylesheet>
-<link href="${pageContext.request.contextPath}/css/boot-crm.css"
+<link href="${pageContext.request.contextPath}/Boot_crm/css/boot-crm.css"
 	type=text/css rel=stylesheet>
-<script src="${pageContext.request.contextPath}/js/beijing.js" />
-<script src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js" />
+<script src="${pageContext.request.contextPath}/Boot_crm/js/beijing.js" />
+<script src="${pageContext.request.contextPath}/Boot_crm/js/jquery-1.11.3.min.js" />
 
 <meta content="MSHTML 6.00.2600.0" name=GENERATOR>
 <script>
